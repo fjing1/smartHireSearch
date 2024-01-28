@@ -81,7 +81,6 @@ Learning from Feedback: Implement LLMs that can learn from successful hires and 
 
 
 # Cost Estimation
-Cost Estimation
 
 After discussion, we assume 100 job seekers, 1 job description. The average tokens for a job seeker resume profile is 1000 tokens, job description is 2000 tokens. Thus, one match cost 100 * 1000 + 2000 = 102k tokens. We approximately to 100k tokens for GPT4 API, as we searched the cost will be around the cost is  USD $0.01 per 1,000 token. Therefore, for 100,000 input tokens, the cost would be $1.00. 
 We estimate everyday, we have an average 1000 new job posts. Thus the daily cost is 1000$. 
