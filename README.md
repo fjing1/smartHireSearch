@@ -7,7 +7,7 @@ The system is aimed at serving three primary user groups:
 Recruiters: Seeking efficient tools for managing and matching a high volume of candidates and job openings and ensuring high-quality matches to reduce time-to-hire.
 Job Seekers: Desiring timely responses and higher engagement rates from recruiters.
 
-# Project Motivation：Project Motivation:
+# Project Motivation:
 A recruitment agency already has a pool of candidates while fetching numerous job openings from sites like LinkedIn, Indeed, and Glassdoor. The agency is seeking to enhance the efficiency of its recruitment team by providing high-quality candidates to improve the match to job openings, thereby optimizing the recruitment process.
 
 
