@@ -21,7 +21,8 @@ The sidenote is that hiring agency needs to have both quality and quantity of hi
 # Solution
 -OpenAI LLM (API Cost)
 # Architecture Diagram
-<img width="900" alt="image" src="https://github.com/fjing1/smartHireSearch/assets/32583955/553fa4b6-baea-4a7e-be9c-af80fca7d041">
+<img width="900" alt="image" src="https://github.com/fjing1/smartHireSearch/assets/32583955/389d0044-ec30-4e61-94dc-faa0fd6a6b19">
+
 
 # Cost Estimation
 
