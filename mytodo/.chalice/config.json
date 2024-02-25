@@ -1,0 +1,15 @@
+{
+  "stages": {
+    "dev": {
+      "autogen_policy": false,
+      "api_gateway_stage": "api",
+      "lambda_timeout": 900,
+      "environment_variables": {
+        "APP_TABLE_NAME": "todo-app-1c1affa3-e886-40a7-a67b-7d89bd5e45a4",
+        "USERS_TABLE_NAME": "users-app-b6a025b4-7d3a-44fe-87cc-dc25bc385ea1"
+      }
+    }
+  },
+  "version": "2.0",
+  "app_name": "mytodo"
+}
