@@ -11,7 +11,7 @@ app = Chalice(app_name='mytodo')
 app.debug = True
 _DB = None
 _USER_DB = None
-apify_client = ApifyClient('apify_api_IY3hoxDRTo2d2iF7NoZXPIOtFlDb8J1cSkPQ')
+apify_client = ApifyClient('') # fill with api key inside ''
 
 # Define locations as a global variable
 locations = {"w+CAIQICIHVG9yb250bw==": "Toronto", "w+CAIQICIJVmFuY291dmVy": "Vancourver", "w+CAIQICIITW9udHJlYWw=": "Montreal"}
@@ -38,7 +38,7 @@ def get_job_data(uule, jt):
     return d
 
 def save_to_es(df):
-    host = 'search-swift-hire-dev-jfmldmym4cfbiwdhwmtuqq6ihy.us-west-2.es.amazonaws.com'
+    host = '' #put your host here
     port = 443
     auth = ('swift', 'Hire123!') # For testing only. Don't store credentials in code.
 
