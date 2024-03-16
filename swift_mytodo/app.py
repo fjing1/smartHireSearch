@@ -85,3 +85,7 @@ def every_24_hours(event):
     position_df.drop(columns='thumbnail', inplace=True)
     print("start the openserach part")
     save_to_es(position_df)
+
+def match_resume_jobs(resume_summary, job_df_path):
+    loader = CSVLoad(file_path = job_df_path)
+    pages = 
