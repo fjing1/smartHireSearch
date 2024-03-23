@@ -21,7 +21,7 @@ def get_job_data(uule, jt):
         "csvFriendlyOutput": True,
         "includeUnfilteredResults": False,
         "maxConcurrency": 10,
-        "maxPagesPerQuery": 2,
+        "maxPagesPerQuery": 4,
         "queries": f"https://www.google.com/search?ibp=htl;jobs&q={jt}&uule={uule}",
         "saveHtml": False,
         "saveHtmlToKeyValueStore": False,
@@ -68,7 +68,7 @@ def save_to_es(df):
 
     print("Data Saved to Elastic Search dashboard Done.")
 
-@app.schedule(Rate(7, unit=Rate.DAYS))
+@app.schedule(Rate(24, unit=Rate.HOURS))
 def every_week(event):
     position_df = pd.DataFrame()
     job_titles = ["Software Engineer",  "Data Engineer", "Data Scientist"]
