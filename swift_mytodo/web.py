@@ -6,8 +6,9 @@ from datetime import datetime
 bucket_name = "swift-hire-felix-kelly-us-west-2"
 
 def upload_to_aws(local_file, bucket, s3_file):
-    s3 = boto3.client('s3', aws_access_key_id='AKIA5FTZC7FQDRFCWX4V',
-                      aws_secret_access_key='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')
+    # get these from aws user
+    s3 = boto3.client('s3', aws_access_key_id='',
+                      aws_secret_access_key='')
 
     try:
         s3.upload_file(local_file, bucket, s3_file)
