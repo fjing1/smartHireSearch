@@ -77,7 +77,7 @@ Learning from Feedback: Implement LLMs that can learn from successful hires and 
 
 
 # Architecture Diagram
-<img width="900" alt="image" src="https://github.com/fjing1/smartHireSearch/assets/32583955/389d0044-ec30-4e61-94dc-faa0fd6a6b19">
+![alt text](image.png)
 
 
 # Cost Estimation
