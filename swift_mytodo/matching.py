@@ -67,7 +67,7 @@ from IPython.display import display
 import resume_summary
 import utils
 
-def get_job_data_from_opensearch(job_index_name = 'swift_dev_felix_kelly' ): 
+def get_job_data_from_opensearch(job_index_name = 'swift_dev_felix_kelly_jo' ): 
     """
     input:
     job_index_name = 'swift_dev_felix_kelly'
@@ -76,7 +76,7 @@ def get_job_data_from_opensearch(job_index_name = 'swift_dev_felix_kelly' ):
     get latest job data from opensearch, job_index_name.
     
     """
-    host = 'search-swift-hire-dev-jfmldmym4cfbiwdhwmtuqq6ihy.us-west-2.es.amazonaws.com'
+    host = utils.load_specific_api_key(filename='credential.txt', key_name='opensearch_host') 
     port = 443
     auth = ('swift', 'Hire123!') # For testing only. Don't store credentials in code.
     

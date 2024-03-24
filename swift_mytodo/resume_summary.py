@@ -222,13 +222,8 @@ def llm_resume_preprocess(local_s3_resume_path = './data/s3_resumes/' ):
     return all_resume_df
 
 
-    
-
-
-if __name__ == "__main__":
-    # run 
+def main():
     resume_from_S3()  
-
     # use llm to summary resume
     os.environ['OPENAI_API_KEY'] = utils.load_specific_api_key(filename='credential.txt', key_name='openai_api_key') 
 
@@ -239,6 +234,13 @@ if __name__ == "__main__":
     all_resume_df.to_csv('./data/placeholder_resume_job/all_resume_df.csv', index=False) 
 
     save_data_to_opensearch('swift_dev_felix_kelly_resume', all_resume_df)
+
+
+# For demo purpose: when there is change in s3 bucket, we run this main
+@app.on_s3_event(bucket=utils.load_specific_api_key(filename='credential.txt', key_name='s3_bucket_felix') ,
+                 events=['s3:ObjectCreated:*'])
+if __name__ == "__main__":
+    main()
 
 
 

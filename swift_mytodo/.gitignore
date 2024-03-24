@@ -1,4 +1,5 @@
 .DS_Store
 .chalice/deployments/
 .chalice/venv/
+credential.txt
 data/*
