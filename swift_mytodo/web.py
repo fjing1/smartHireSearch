@@ -27,7 +27,7 @@ def main():
 
     first_name = st.text_input('First Name')
     last_name = st.text_input('Last Name')
-    target_title = st.text_input('Target title, such as sde, ds, da, de').lower()
+    target_title = st.text_input('Target title, such as software developer, data scientist').lower()
     target_location = st.text_input("Target cities, such as Toronto, Vancouver, Montreal, etc").lower()
     email = st.text_input("Enter the email you want to receive job apply links").lower()
     # TODO: 
