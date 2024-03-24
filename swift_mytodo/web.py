@@ -2,13 +2,14 @@ import streamlit as st
 import boto3
 from botocore.exceptions import NoCredentialsError
 from datetime import datetime
+import utils
 
-bucket_name = "swift-hire-felix-kelly-us-west-2"
+ 
 
-def upload_to_aws(local_file, bucket, s3_file):
+def upload_to_aws(aws_access_key, aws_secret_access,  local_file, bucket, s3_file):
     # get these from aws user
-    s3 = boto3.client('s3', aws_access_key_id='',
-                      aws_secret_access_key='')
+    s3 = boto3.client('s3', aws_access_key_id=aws_access_key,
+                      aws_secret_access_key=aws_secret_access)
 
     try:
         s3.upload_file(local_file, bucket, s3_file)
@@ -21,7 +22,7 @@ def upload_to_aws(local_file, bucket, s3_file):
         print("Credentials not available")
         return False
 
-def main():
+def main(aws_access_key, aws_secret_access, bucket_name):
     st.title('Resume Uploader')
     st.write('Upload your resume in PDF format and we will store it in our AWS S3 Bucket!')
 
@@ -41,8 +42,11 @@ def main():
         if st.button('Submit'):
             #timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
             s3_filename = f"{first_name}_{last_name}_{target_title}_{target_location}_{email}.pdf"
-            upload_to_aws('temp_file.pdf', bucket_name, s3_filename)
+            upload_to_aws( aws_access_key, aws_secret_access,'temp_file.pdf', bucket_name, s3_filename)
             st.success("Your resume has been uploaded successfully!")
 
 if __name__ == "__main__":
-    main()
+    aws_access_key = utils.load_specific_api_key(filename='credential.txt', key_name='aws_access_key_id') 
+    aws_secret_access = utils.load_specific_api_key(filename='credential.txt', key_name='aws_secret_access_key') 
+    bucket_name = "swift-hire-felix-kelly-us-west-2"
+    main(aws_access_key, aws_secret_access, bucket_name)
