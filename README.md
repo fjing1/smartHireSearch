@@ -71,7 +71,7 @@ A recruitment agency already has a pool of candidates while fetching numerous jo
 ## ETL/ELT Pipeline:
 - Job Description Pipeline: Schedule **API calls** to collect job descriptions, perform transformations (flattening, cleanup), and save the processed data into the database. 
 - Resume Pipeline: Triggered by user upload, summarize resumes, store raw data in **S3**, and processed data in the database. 
-- Matching Algorithm Pipeline: Extract and process data from resumes and job descriptions using a **GPT4** language model, and then send notifications based on matches. This can be triggered either on a schedule or initiated by the user. 
+- Matching Algorithm Pipeline: Extract and process data from resumes and job descriptions using a **GPT3.5** language model, and then send notifications based on matches. This can be triggered either on a schedule or initiated by the user. 
 
 
 
@@ -105,7 +105,7 @@ Users submit their resumes through our website, and we send job recommendations 
 
 
 # Cost Estimation
-We assume 100 job seekers, 1 job description. The average tokens for a job seeker resume profile is 1000 tokens, job description is 2000 tokens. Thus, one match cost 100 * 1000 + 2000 = 102k tokens. We approximately to 100k tokens for GPT4 API, as we searched the cost will be around the cost is  USD $0.01 per 1,000 token. Therefore, for 100,000 input tokens, the cost would be $1.00. 
+We assume 100 job seekers, 1 job description. The average tokens for a job seeker resume profile is 1000 tokens, job description is 2000 tokens. Thus, one match cost 100 * 1000 + 2000 = 102k tokens. We approximately to 100k tokens for GPT3.5 API, as we searched the cost will be around the cost is  USD $0.01 per 1,000 token. Therefore, for 100,000 input tokens, the cost would be $1.00. 
 We estimate everyday, we have an average 1000 new job posts. Thus the daily cost is 1000$. 
 For the output, we expect ranking results per job post.
 Output token cost is $0.01 per 1,000 token. Output cost per job post is less than 1000 token, but for convenience, we say it cost 0.01$ 
