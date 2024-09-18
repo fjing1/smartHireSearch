@@ -76,6 +76,8 @@ Learning from Feedback: Implement LLMs that can learn from successful hires and 
 
 
 # Architecture Diagram
+![Architecture Diagram](https://github.com/user-attachments/assets/eaf450c7-866c-470e-aec0-b866263c0287)
+
 <img width="870" alt="image" src="https://github.com/fjing1/swift_demo/assets/32583955/e1d14418-4e80-46e0-893b-1d937327b123">
 
 
